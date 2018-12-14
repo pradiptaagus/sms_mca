@@ -1,5 +1,6 @@
 import datetime
 import pymysql
+import requests
 import websocket
 import json
 
@@ -13,7 +14,30 @@ import time
 
 api_token = 'o.3jlS0nO1oAQ5bO3Nq7uo6jS899W9fFM4'
 api_base_url = 'wss://stream.pushbullet.com/websocket/'
+headers = {'Content-Type': 'application/json', 'Authorization': 'Bearer {0}'.format(api_token)}
+error = ""
 
+def reply(target_device_iden, source_user_iden, conversation_iden, message):
+    api_url = api_base_url + 'ephemerals'
+
+    data = {
+        "push": {
+            "conversation_iden": str(conversation_iden),
+            "message": str(message),
+            "package_name": "com.pushbullet.android",
+            "source_user_iden": str(source_user_iden),
+            "target_device_iden": str(target_device_iden),
+            "type": "messaging_extension_reply"
+        },
+        "type": "push"
+    }
+    response = requests.post(api_url, data=json.dumps(data), headers=headers)
+    print(response)
+
+    if response.status_code == 200:
+        return json.loads(response.content.decode('utf-8'))
+    else:
+        return None
 
 def on_message(ws, message):
     result = json.loads(message)
@@ -42,6 +66,7 @@ def on_message(ws, message):
             print()
         else:
             messageBody = notifications[0].get("body")
+            print(messageBody)
             sender = notifications[0].get("title")
             source_device_iden = result.get("push", {}).get("source_device_iden")
             timestamp = notifications[0].get("timestamp")
@@ -62,6 +87,7 @@ def on_message(ws, message):
             cur = db.cursor()
 
             # determine message to send to client
+            print(len(splitMessage))
             if splitMessage[0].lower() == "menu":
                 cur.callproc("showMenu")
                 result = cur.fetchall()
@@ -119,7 +145,6 @@ def on_message(ws, message):
                         splitMessage[1], splitMessage[2])
                 else:
                     outboxMessage = "Kode = {}, nama = {}, nilai = {}".format(result[0], result[1], result[2])
-
             else:
                 outboxMessage = "Halo, untuk melanjutkan balas dengan MENU"
 
@@ -148,11 +173,15 @@ def on_message(ws, message):
         except Error as e:
             error = "DataError: " + str(e)
             print(error)
+
+        if error:
+            reply(target_device_iden, source_user_iden, conversation_iden, "Layanan sedang sibuk")
+
     else:
         print("status: " + str(result["type"]))
+        print("message: " + str(result.get("push", {}).get("body")))
         print("\n")
 
-    # print(message)
 
 
 def on_error(ws, error):

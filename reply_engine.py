@@ -97,9 +97,8 @@ while True:
         cur = db.cursor()
         main()
         print("status: nop \n")
+        db.rollback()
     except pymysql.DatabaseError as e:
         print(e)
-
     print("\n")
-    db.rollback()
     time.sleep(5)
