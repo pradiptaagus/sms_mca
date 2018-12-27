@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e2cf9dc-9b05-48ca-a438-b679b72b3bb7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/SMS_Gateway.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SMS_Gateway.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my_websocket.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_websocket.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reply_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/reply_engine.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sms_mca.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sms_mca.sql" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,8 +17,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/my_websocket.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-461">
-              <caret line="173" column="42" lean-forward="true" selection-start-line="173" selection-start-column="42" selection-end-line="173" selection-end-column="42" />
+            <state relative-caret-position="176">
+              <caret line="14" column="47" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="47" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -32,8 +29,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/reply_engine.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1034">
-              <caret line="47" column="19" lean-forward="true" selection-start-line="27" selection-end-line="47" selection-end-column="19" />
+            <state relative-caret-position="22">
+              <caret line="37" column="47" lean-forward="true" selection-start-line="37" selection-start-column="47" selection-end-line="37" selection-end-column="47" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -53,6 +50,7 @@
       <find>headers</find>
       <find>time</find>
       <find>datetime</find>
+      <find>message:</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -61,8 +59,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/reply_engine.py" />
         <option value="$PROJECT_DIR$/my_websocket.py" />
+        <option value="$PROJECT_DIR$/reply_engine.py" />
       </list>
     </option>
   </component>
@@ -122,7 +120,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.16827998" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16815476" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -133,7 +131,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32850242" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.34138486" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.36231884" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32850242" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -187,8 +185,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/my_websocket.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-461">
-          <caret line="173" column="42" lean-forward="true" selection-start-line="173" selection-start-column="42" selection-end-line="173" selection-end-column="42" />
+        <state relative-caret-position="176">
+          <caret line="14" column="47" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="47" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
@@ -197,8 +195,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/reply_engine.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1034">
-          <caret line="47" column="19" lean-forward="true" selection-start-line="27" selection-end-line="47" selection-end-column="19" />
+        <state relative-caret-position="22">
+          <caret line="37" column="47" lean-forward="true" selection-start-line="37" selection-start-column="47" selection-end-line="37" selection-end-column="47" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>

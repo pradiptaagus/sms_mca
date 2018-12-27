@@ -5,7 +5,7 @@ import time
 
 from pymysql import Error
 
-api_token = 'o.3jlS0nO1oAQ5bO3Nq7uo6jS899W9fFM4'
+api_token = <your_api_token>
 api_base_url = 'https://api.pushbullet.com/v2/'
 headers = {'Content-Type': 'application/json', 'Authorization': 'Bearer {0}'.format(api_token)}
 
@@ -40,7 +40,7 @@ def reply(target_device_iden, source_user_iden, conversation_iden, message):
         "type": "push"
     }
     response = requests.post(api_url, data=json.dumps(data), headers=headers)
-    print(response)
+    print("response: " + str(response))
 
     if response.status_code == 200:
         return json.loads(response.content.decode('utf-8'))
